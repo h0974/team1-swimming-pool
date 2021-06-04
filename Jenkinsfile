@@ -11,7 +11,7 @@ pipeline {
 
         stage('sonarqube-analysis') {
             environment {
-                SONAR_TOKEN = credentials('{ian5566}')
+                SONAR_TOKEN = credentials('{sonarqube-token}')
             }
             steps {
                 sh '''./gradlew sonarqube \
