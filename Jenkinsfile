@@ -2,7 +2,6 @@ pipeline {
     agent any
     stages {
         stage('run-test') {
-            steps {
                 /* when {
                 anyOf {
                     branch 'master'
@@ -19,6 +18,8 @@ pipeline {
                     execPattern: 'app/build/jacoco/**/*.exec'
                 )
              }
+            }
+        
         stage('sonarqube-analysis') {
             environment {
                 SONAR_TOKEN = credentials('sonarqube-token')
