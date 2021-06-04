@@ -1,14 +1,12 @@
 pipeline {
     agent any
-    
     stages {
         stage('run-test') {
             steps {
-               ...(略)…
+                ...(略)…
                 )
             }
         }
-
         stage('sonarqube-analysis') {
             environment {
                 SONAR_TOKEN = credentials('{sonarqube-token}')
